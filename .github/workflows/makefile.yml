@@ -14,11 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: install rosetta
-      run: "/usr/sbin/softwareupdate -install-rosetta -agree-to-license"
-
-    - name: Install dependencies
-      run: arch -arm64 make
+    - name: build
+      run: arch -x86_64 make
     
     - name: generate token
-      run: arch -arm64 ./token-generator
+      run: arch -x86_64 ./token-generator
