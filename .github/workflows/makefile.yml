@@ -15,11 +15,10 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: install rosetta
-      run: /usr/sbin/softwareupdate -install-rosetta -agree-to-license
-      
-      
+      run: "/usr/sbin/softwareupdate -install-rosetta -agree-to-license"
+
     - name: Install dependencies
-      run: make
+      run: arch -arm64 make
     
     - name: generate token
-      run: ./token-generator
+      run: arch -arm64 ./token-generator
