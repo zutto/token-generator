@@ -3,5 +3,5 @@
 
 # building
 ```
-Make
+make
 ```
